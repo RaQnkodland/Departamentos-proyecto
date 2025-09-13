@@ -1,0 +1,32 @@
+/* ======================= ESTILOS PERSONALIZADOS ======================= */
+
+/* Overlay oscuro en hero */
+
+.absolute inset-0 bg-cover bg-center{
+  background-color:black;
+}
+.hero-overlay {
+    background: linear-gradient(to right, rgba(30, 42, 56, 0.8) 0%, rgba(30, 42, 56, 0.5) 100%);
+}
+
+/* Efecto hover en íconos de features */
+.feature-icon {
+    transition: all 0.3s ease;
+}
+.feature-card:hover .feature-icon {
+    transform: translateY(-5px);
+}
+
+/* Animaciones en galería */
+.gallery-image {
+    transition: all 0.4s ease;
+}
+.gallery-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Overlay en sección de cita */
+.quote-overlay {
+    background-color: rgba(30, 42, 56, 0.7);
+}

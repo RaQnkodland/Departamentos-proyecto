@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malecón Cisneros | Residencias frente al mar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon1.png" type="image/png" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#1e2a38',
+                        'light-gray': '#f4f4f4',
+                    },
+                    fontFamily: {
+                        'playfair': ['Playfair Display', 'serif'],
+                        'montserrat': ['Montserrat', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(2, 1, 1, 0.8) 0%, rgba(48, 39, 31, 0.5) 100%);
+        }
+        .feature-icon {
+            transition: all 0.3s ease;
+            
+        }
+        .feature-card:hover .feature-icon {
+            transform: translateY(-5px);    
+        }
+        .gallery-image {
+            transition: all 0.4s ease;
+        }
+        .gallery-image:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        .quote-overlay {
+            background: linear-gradient(to right, rgba(2, 1, 1, 0.8) 0%, rgba(48, 39, 31, 0.5) 100%);
+        }
+    </style>
+</head>
+<body class="font-montserrat text-gray-800">
+    <!-- Hero Section -->
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://puntodestino.com.mx/wp-content/uploads/2023/08/2-4.jpg');"></div>
+        <div class="absolute inset-0 hero-overlay"></div>
+        <div class="relative z-10 px-6 text-center text-white max-w-4xl">
+            <p class="text-sm md:text-base uppercase tracking-widest mb-2 font-montserrat">Departamentos frente al mar</p>
+            <h1 class="font-playfair text-4xl md:text-6xl lg:text-7xl font-bold mb-4 tracking-tight">Vive la serenidad del océano</h1>
+            <p class="text-lg md:text-xl mb-4 font-light italic">sin renunciar a la conectividad urbana</p>
+            <p class="text-sm md:text-base mb-8 font-montserrat">Malecón Cisneros · Miraflores</p>
+            <a href="#contact" class="bg-white text-navy px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition duration-300 inline-block">Averiguar más</a>
+        </div>
+        <div class="absolute bottom-10 left-0 right-0 text-center">
+            <a href="#about" class="text-white animate-bounce inline-block">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Project Section -->
+    <section id="about" class="py-20 px-6 bg-white">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
+                <div class="relative w-64 h-64 rounded-full overflow-hidden border-4 border-navy shadow-lg">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Edificio Malecón Cisneros" class="w-full h-full object-cover">
+                </div>
+            </div>
+            <div class="md:w-2/3 md:pl-16">
+                <h2 class="font-playfair text-3xl md:text-4xl text-navy mb-6">MALECÓN CISNEROS</h2>
+                <p class="text-lg mb-6 leading-relaxed">Ubicado en el corazón de Miraflores, Malecón Cisneros redefine el concepto de vida frente al mar. Este proyecto residencial exclusivo ofrece departamentos desde 75 m² diseñados con los más altos estándares de calidad y elegancia.</p>
+                <p class="text-lg mb-8 leading-relaxed">Disfruta de vistas panorámicas al océano Pacífico, acceso directo al malecón y todas las comodidades de la vida urbana a solo pasos de tu hogar. Una combinación perfecta entre naturaleza, exclusividad y conectividad.</p>
+                <a href="#pricing" class="border-2 border-navy text-navy px-8 py-3 rounded-full font-medium hover:bg-navy hover:text-white transition duration-300 inline-block">Ver precios y planos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="relative py-20 px-6">
+        <div class="absolute inset-0 bg-cover bg-center opacity-20" style="background-image: url('https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+        <div class="relative max-w-6xl mx-auto">
+            <div class="bg-white p-10 md:p-16 rounded-lg shadow-xl">
+                <h2 class="font-playfair text-3xl text-center text-navy mb-16">EXPERIENCIA MALECÓN CISNEROS</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon bg-navy text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="font-playfair text-xl text-navy mb-3">Ubicación Privilegiada</h3>
+                        <p class="text-gray-600">Frente al mar en el exclusivo Malecón Cisneros, con acceso directo a parques y zonas comerciales.</p>
+                    </div>
+                    <div class="feature-card text-center">
+                        <div class="feature-icon bg-navy text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                            <i class="fas fa-ruler-combined"></i>
+                        </div>
+                        <h3 class="font-playfair text-xl text-navy mb-3">Amplios Espacios</h3>
+                        <p class="text-gray-600">Departamentos desde 75 m² hasta 180 m², con diseños modernos y distribución inteligente.</p>
+                    </div>
+                    <div class="feature-card text-center">
+                        <div class="feature-icon bg-navy text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                            <i class="fas fa-bed"></i>
+                        </div>
+                        <h3 class="font-playfair text-xl text-navy mb-3">2-3 Dormitorios</h3>
+                        <p class="text-gray-600">Amplios dormitorios con walk-in closet y baños con acabados premium. Suite principal con vista al mar.</p>
+                    </div>
+                    <div class="feature-card text-center">
+                        <div class="feature-icon bg-navy text-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl">
+                            <i class="fas fa-swimming-pool"></i>
+                        </div>
+                        <h3 class="font-playfair text-xl text-navy mb-3">Amenities Exclusivos</h3>
+                        <p class="text-gray-600">Piscina infinity, gimnasio equipado, lounge privado, terraza con vista 360° y seguridad 24/7.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="py-20 px-6 bg-light-gray">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="font-playfair text-3xl text-center text-navy mb-16">GALERÍA DE INTERIORES</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <div class="gallery-image rounded-full overflow-hidden aspect-square shadow-md">
+                    <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80" alt="Sala de estar" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-image rounded-full overflow-hidden aspect-square shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Cocina moderna" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-image rounded-full overflow-hidden aspect-square shadow-md">
+                    <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Dormitorio principal" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-image rounded-full overflow-hidden aspect-square shadow-md">
+                    <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Baño de lujo" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-image rounded-full overflow-hidden aspect-square shadow-md">
+                    <img src="https://oceanside.pe/departamentos/wp-content/uploads/2023/12/oceanside-cabecera-01-3-1200x675.jpg" alt="Terraza con vista al mar" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-image rounded-full overflow-hidden aspect-square shadow-md">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoJx6WiRcdZzwi_A0F7acTjuDa8iGhkd_F3A&s" alt="Área de lounge" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-image rounded-full overflow-hidden aspect-square shadow-md">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQZOzSUmizwere1QDScTq1M7FK0sP2S9WS-A&s" alt="Vista desde el departamento" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-image rounded-full overflow-hidden aspect-square shadow-md">
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/479669722.jpg?k=b4102c1e69a852e42008ab0e8b8b9d6e882cfe922f0b6ef04f73d3973cb044a2&o=&hp=1" alt="Piscina infinity" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="relative py-32 px-6 flex items-center justify-center">
+        <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+        <div class="absolute inset-0 quote-overlay"></div>
+        <div class="relative z-10 text-center text-white max-w-4xl">
+            <h2 class="font-playfair text-3xl md:text-5xl mb-8 leading-tight">"Tu nuevo hogar frente al mar, donde cada amanecer es una obra de arte"</h2>
+            <p class="text-xl italic">Malecón Cisneros - Miraflores</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="font-playfair text-3xl text-center text-navy mb-16">CONTÁCTANOS</h2>
+            <div class="bg-light-gray p-10 rounded-lg shadow-md">
+                <form>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <div>
+                            <label for="name" class="block text-gray-700 mb-2">Nombre completo</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 mb-2">Correo electrónico</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 mb-2">Teléfono</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy">
+                        </div>
+                        <div>
+                            <label for="interest" class="block text-gray-700 mb-2">Interés</label>
+                            <select id="interest" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy">
+                                <option value="1-bedroom">Departamento 1 dormitorio</option>
+                                <option value="2-bedroom">Departamento 2 dormitorios</option>
+                                <option value="3-bedroom">Departamento 3 dormitorios</option>
+                                <option value="penthouse">Penthouse</option>
+                                <option value="info">Solo información</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label for="message" class="block text-gray-700 mb-2">Mensaje</label>
+                        <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-navy"></textarea>
+                    </div>
+                    <button type="submit" class="bg-navy text-white px-8 py-3 rounded-full font-medium hover:bg-opacity-90 transition duration-300 w-full md:w-auto">Enviar solicitud</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
