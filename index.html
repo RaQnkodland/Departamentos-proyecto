@@ -30,10 +30,9 @@
         }
         .feature-icon {
             transition: all 0.3s ease;
-            
         }
         .feature-card:hover .feature-icon {
-            transform: translateY(-5px);    
+            transform: translateY(-5px);
         }
         .gallery-image {
             transition: all 0.4s ease;
@@ -45,9 +44,96 @@
         .quote-overlay {
             background: linear-gradient(to right, rgba(2, 1, 1, 0.8) 0%, rgba(48, 39, 31, 0.5) 100%);
         }
+        /* ESTILOS MODO NOCHE */
+        body.night {
+            background-color: #121212;
+            color: #fafafa;
+        }
+        body.night .bg-white { background-color: #1e1e1e !important; }
+        body.night .bg-light-gray { background-color: #2a2a2a !important; }
+        body.night .text-navy { color: #dbe9ff !important; }
+        body.night .border-navy { border-color: #9bbbd4 !important; }
+        body.night a.bg-white {
+            background-color: #2a2a2a !important;
+            color: #9bbbd4 !important;
+        }
+        body.night a.bg-white:hover {
+            background-color: #3a3a3a !important;
+        }
+        body.night .hero-overlay {
+            background: linear-gradient(to right, rgba(18, 18, 18, 0.8), rgba(48, 48, 48, 0.5));
+        }
+        body.night .quote-overlay {
+            background: linear-gradient(to right, rgba(18, 18, 18, 0.8), rgba(48, 48, 48, 0.5));
+        }
+        /* Texto claro sección Contacto modo noche */
+        body.night #contact {
+            color: #eaeaea;
+        }
+        body.night #contact label,
+        body.night #contact input,
+        body.night #contact select,
+        body.night #contact textarea {
+            color: #f0f0f0;
+            background-color: #2a2a2a;
+            border-color: #555555;
+        }
+        body.night #contact input:focus,
+        body.night #contact select:focus,
+        body.night #contact textarea:focus {
+            outline-color: #9bbbd4;
+        }
+        /* Modal imagen con animación y tamaño uniforme */
+        #imageModal {
+            transition: opacity 0.3s ease;
+        }
+        #imageModal.show {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        #imageModal.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        #imageModal img {
+            max-width: 80vw;
+            max-height: 80vh;
+            border-radius: 0.5rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+            display: block;
+            margin: 0 auto;
+        }
+        #imageModal.show img {
+            transform: scale(1);
+        }
+        #closeModal {
+            background-color: rgba(255,255,255,0.85);
+            border-radius: 50%;
+            padding: 0.2rem 0.8rem;
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #333;
+            cursor: pointer;
+            box-shadow: 0 0 12px rgba(0,0,0,0.4);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1001;
+        }
+        #closeModal:hover {
+            background-color: #fff;
+            color: #000;
+        }
     </style>
 </head>
 <body class="font-montserrat text-gray-800">
+
+    <!-- Botón Modo Noche -->
+    <button id="nightModeToggle" class="fixed top-5 right-5 bg-navy text-white px-4 py-2 rounded z-50">Modo Noche</button>
+
     <!-- Hero Section -->
     <section class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://puntodestino.com.mx/wp-content/uploads/2023/08/2-4.jpg');"></div>
@@ -144,13 +230,13 @@
                     <img src="https://oceanside.pe/departamentos/wp-content/uploads/2023/12/oceanside-cabecera-01-3-1200x675.jpg" alt="Terraza con vista al mar" class="w-full h-full object-cover">
                 </div>
                 <div class="gallery-image rounded-full overflow-hidden aspect-square shadow-md">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRoJx6WiRcdZzwi_A0F7acTjuDa8iGhkd_F3A&s" alt="Área de lounge" class="w-full h-full object-cover">
+                    <img src="https://laguiainmobiliaria.com.pe/wp-content/uploads/2022/03/1.TERRAZA-1024x768.jpg" alt="Área de lounge" class="w-full h-full object-cover">
                 </div>
                 <div class="gallery-image rounded-full overflow-hidden aspect-square shadow-md">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQZOzSUmizwere1QDScTq1M7FK0sP2S9WS-A&s" alt="Vista desde el departamento" class="w-full h-full object-cover">
+                    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/510926728.jpg?k=c40bdc9f3081d37c6f9a55185a92417039b9ae7e367541a712cc43c06c4179fc&o=&hp=1" alt="Vista desde el departamento" class="w-full h-full object-cover">
                 </div>
                 <div class="gallery-image rounded-full overflow-hidden aspect-square shadow-md">
-                    <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/479669722.jpg?k=b4102c1e69a852e42008ab0e8b8b9d6e882cfe922f0b6ef04f73d3973cb044a2&o=&hp=1" alt="Piscina infinity" class="w-full h-full object-cover">
+                    <img src="https://d1m7bwa5z2c7c9.cloudfront.net/6YOWkcCaxTz_1280x720.jpeg" alt="Piscina infinity" class="w-full h-full object-cover">
                 </div>
             </div>
         </div>
@@ -206,6 +292,13 @@
         </div>
     </section>
 
+    <!-- Modal para imagen ampliada -->
+    <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 hidden opacity-0 pointer-events-none">
+        <div class="relative max-w-4xl max-h-full p-4">
+            <button id="closeModal" class="absolute top-2 right-2 text-white text-3xl font-bold cursor-pointer">&times;</button>
+            <img id="modalImg" src="" alt="Imagen ampliada" />
+        </div>
+    </div>
 
     <script>
         // Smooth scrolling for anchor links
@@ -216,6 +309,38 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        // Alternar modo noche al hacer clic en botón
+        document.getElementById('nightModeToggle').addEventListener('click', function () {
+            document.body.classList.toggle('night');
+        });
+
+        // Modal para ampliar imágenes de galería con animación y tamaño uniforme
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImg');
+        const closeModal = document.getElementById('closeModal');
+
+        document.querySelectorAll('.gallery-image img').forEach(img => {
+            img.addEventListener('click', () => {
+                modalImg.src = img.src;
+                modal.classList.add('show');
+                modal.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
+                // Fuerza repaint para animar
+                void modal.offsetWidth;
+                modal.style.opacity = 1;
+                modal.style.pointerEvents = 'auto';
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('show');
+            modal.style.opacity = 0;
+            modal.style.pointerEvents = 'none';
+            // Espera para que termine la animación y oculta clase hidden
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
         });
     </script>
 </body>
